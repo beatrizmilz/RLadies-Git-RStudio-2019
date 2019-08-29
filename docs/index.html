@@ -86,10 +86,10 @@ class: split-33 with-border
   ## Pré-requisitos
   ]]
   .row.bg-main2[.content[
-  ##  Configurando o `Git`
+  ##  Configurando o Git
   ]]
   .row.bg-main3[.content[
-  ##  Configurando o `GitHub`
+  ##  Configurando o GitHub
   ]]
   .row.bg-main4[.content[
   ##  Trabalhando com projetos no `RStudio` + `GitHub`
@@ -119,7 +119,7 @@ class: middle
 # Pré-requisitos
 
 .pull-left[
-- R 
+## R 
   - [Download neste link](https://cran.r-project.org/)
   - Use a versão mais recente 😉
 
@@ -142,7 +142,7 @@ class: middle
 # Pré-requisitos
 
 .pull-left[
-- RStudio
+## RStudio
   - [Download neste link](https://www.rstudio.com/products/rstudio/download/)
   - Use a versão mais recente 😉
   
@@ -166,7 +166,7 @@ class: middle
 
 
 .pull-left[
-- Criar um conta gratuita no GitHub
+## Criar um conta gratuita no GitHub
   - [Neste link](https://github.com/)
   - Caso já tenha, não é preciso criar uma nova conta.
   
@@ -190,7 +190,7 @@ class: middle
 
 .pull-left[
 
-- Git 
+## Git 
   - [Download neste link](https://git-scm.com/downloads)
 
   
@@ -213,7 +213,7 @@ class: middle
 # Pré-requisitos
 
 .pull-left[
-- Pacote [`usethis`](https://usethis.r-lib.org/)
+## Pacote [`usethis`](https://usethis.r-lib.org/)
 
 
 ```r
@@ -305,7 +305,14 @@ usethis::browse_github_token()
 # ● Make sure '.Renviron' ends with a newline!
 ```
 
-- Uma página do GitHub irá abrir, com as configurações necessárias. Crie o novo token.
+- Uma página do GitHub irá abrir, com as configurações necessárias. Você pode alterar o nome do token, para saber em qual computador está vinculando. Crie o novo token.
+
+---
+class: middle  bg-main4
+
+### Exemplo:
+
+&lt;img src="img/gifs/browse-github-token2.gif" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 - Copie o token gerado:
@@ -469,6 +476,14 @@ usethis::use_readme_md()
 
 &lt;img src="https://media2.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy-downsized.gif" width="30%" style="display: block; margin: auto;" /&gt;
 
+
+---
+class: middle  bg-main4
+
+### Exemplo:
+
+&lt;img src="img/gifs/create-proj2.gif" width="100%" style="display: block; margin: auto;" /&gt;
+
 ---
 # Prática 2 - Clonando um repositório do GitHub
 
@@ -483,8 +498,8 @@ usethis::use_readme_md()
 
 
 ```r
-usethis::create_from_github("rstudio-education/remaster-the-tidyverse",
-                   destdir = "C:/Users/beatr/Documents/GitHub",
+usethis::create_from_github("rstudio-education/remaster-the-tidyverse", #usuário/repositório
+                   destdir = "C:/Users/beatr/Documents/GitHub", #diretório onde quer que os arquivos sejam salvos
                    fork = TRUE)
 # Creating 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse/'
 # ✔ Forking 'rstudio-education/remaster-the-tidyverse'
@@ -555,7 +570,7 @@ class: middle  bg-main4
 
 # Referências
 
-- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/):
+- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/), escrito por [Caio Lente](https://lente.dev/):
   - [Git e GitHub (Zen do R - Parte 4)](https://www.curso-r.com/blog/2019-07-23-zen-do-r-4/)
   
 - Outra referência importante: [Happy Git and GitHub for the useR - 
