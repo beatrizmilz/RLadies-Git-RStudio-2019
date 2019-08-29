@@ -67,17 +67,20 @@ knitr::include_graphics("https://media1.giphy.com/media/qvWavuCEwjEPu/giphy.gif"
 - **Objetivo**: Auxiliar nos primeiros passos a utilizar o `Git` e `GitHub` diretamente do `RStudio`. 
 
 - **Estrutura**:
-  - Pré-requisitos
-  - Configurando o Git
-  - Configurando o GitHub
-  - Criando um repositório no GitHub diretamente do RStudio, utilizando um projeto (`.Rproj`)
-  - Interface gráfica do RStudio - aba `Git`
 
-- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/):
-  - [Git e GitHub (Zen do R - Parte 4)](https://www.curso-r.com/blog/2019-07-23-zen-do-r-4/)
+  - Pré-requisitos
+
+  - Configurando o Git
+
+  - Configurando o GitHub
+
+  - Criando um repositório no GitHub diretamente do RStudio, utilizando um projeto (`.Rproj`)
+
+  - Interface gráfica do RStudio - aba `Git`
   
-- Outra referência importante: [Happy Git and GitHub for the useR - 
-Jenny Bryan](https://happygitwithr.com/)
+  - Outras interfaces gráficas - GUI
+
+
 
 ---
 class: middle
@@ -87,9 +90,8 @@ class: middle
 - R 
   - [Download neste link](https://cran.r-project.org/)
   - Use a versão mais recente `r emo::ji("wink")`
-```{r echo=TRUE}
-R.version.string
-```
+
+
   
 ]
 
@@ -98,6 +100,14 @@ R.version.string
 knitr::include_graphics("img/R_logo.svg.png")
 ```
 ]
+
+
+---
+class:middle
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/prints/install_R.png")
+```
 
 ---
 class: middle
@@ -108,11 +118,7 @@ class: middle
   - [Download neste link](https://www.rstudio.com/products/rstudio/download/)
   - Use a versão mais recente `r emo::ji("wink")`
   
-```{r echo=TRUE, cache=TRUE}
-# ver_RStudio <- rstudioapi::versionInfo()
-# ver_RStudio$version
-# ‘1.2.1335’
-```
+
   
 ]
 
@@ -121,6 +127,14 @@ class: middle
 knitr::include_graphics("img/rstudio.png")
 ```
 ]
+
+---
+class:middle
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/prints/install_RStudio.png")
+```
+
 ---
 class: middle
 # Pré-requisitos
@@ -146,41 +160,33 @@ knitr::include_graphics("img/github-logo.png")
 
 
 ---
-class: 
+class: middle
+
 # Pré-requisitos
 
-## Git __OU__ GitHub Desktop
+
+
 .pull-left[
 
 - Git 
   - [Download neste link](https://git-scm.com/downloads)
-  - Linha de comando
+
   
-```{r out.width="80%"}
-knitr::include_graphics("https://git-scm.com/images/logo@2x.png")
-```
+
 ]
 
 
 .pull-right[
-
-- GitHub Desktop
-  - [Download neste link](https://desktop.github.com)
-  - Interface Gráfica - Graphical User Interface (GUI) 
-  
 ```{r out.width="80%"}
-knitr::include_graphics("https://desktop.github.com/images/desktop-icon.svg")
+knitr::include_graphics("https://git-scm.com/images/logo@2x.png")
 ```
 
 ]
 ---
-class: center, middle 
+class:middle
 
-## Linha de comando ou interface gráfica?
-## Use o que for melhor para **você**!
-
-```{r out.width="80%"}
-knitr::include_graphics("https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif")
+```{r, out.width="100%"}
+knitr::include_graphics("img/prints/install-git.png")
 ```
 
 
@@ -206,11 +212,35 @@ knitr::include_graphics("https://usethis.r-lib.org/reference/figures/logo.png")
 
 ---
 class: middle
-# Configurando o Git/GitHub Desktop, GitHub e RStudio
+# Configurando o Git
 
 - É necessário fazer apenas uma vez (por computador)!
+- Duas possibilidades: no Git, ou no RStudio.
+- Informar para o Git seu nome, e email.
+- Utilize o mesmo email associado à sua conta do GitHub.
+
+- No RStudio:
+
+```{r echo=TRUE, eval=FALSE}
+usethis::use_git_config(user.name = "Beatriz Milz", # Seu nome
+                        user.email = "beatriz.milz@hotmail.com") # Seu email
+```
+
+---
+class: middle
+# Configurando o Git
+
+- No Git:
+
+`$ git config --global user.name "Beatriz Milz"`
 
 
+`$ git config --global user.email beatriz.milz@hotmail.com`
+
+
+```{r out.width="80%"}
+knitr::include_graphics("img/prints/configurar_git.PNG")
+```
 
 
 
@@ -230,4 +260,22 @@ class: middle
 - `create_project()` - creates a non-package project, i.e. a data analysis project ([referência](https://usethis.r-lib.org/reference/create_package.html))
   - Argumento importante: `path` - 	A path. If it exists, it is used. If it does not exist, it is created, provided that the parent path exists.
 
+---
+class: center, middle 
 
+## Linha de comando ou interface gráfica?
+## Use o que for melhor para **você**!
+
+```{r out.width="80%"}
+knitr::include_graphics("https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif")
+```
+
+---
+
+# Referências
+
+- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/):
+  - [Git e GitHub (Zen do R - Parte 4)](https://www.curso-r.com/blog/2019-07-23-zen-do-r-4/)
+  
+- Outra referência importante: [Happy Git and GitHub for the useR - 
+Jenny Bryan](https://happygitwithr.com/)

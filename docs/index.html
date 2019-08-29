@@ -60,17 +60,20 @@ class: middle
 - **Objetivo**: Auxiliar nos primeiros passos a utilizar o `Git` e `GitHub` diretamente do `RStudio`. 
 
 - **Estrutura**:
-  - Pré-requisitos
-  - Configurando o Git
-  - Configurando o GitHub
-  - Criando um repositório no GitHub diretamente do RStudio, utilizando um projeto (`.Rproj`)
-  - Interface gráfica do RStudio - aba `Git`
 
-- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/):
-  - [Git e GitHub (Zen do R - Parte 4)](https://www.curso-r.com/blog/2019-07-23-zen-do-r-4/)
+  - Pré-requisitos
+
+  - Configurando o Git
+
+  - Configurando o GitHub
+
+  - Criando um repositório no GitHub diretamente do RStudio, utilizando um projeto (`.Rproj`)
+
+  - Interface gráfica do RStudio - aba `Git`
   
-- Outra referência importante: [Happy Git and GitHub for the useR - 
-Jenny Bryan](https://happygitwithr.com/)
+  - Outras interfaces gráficas - GUI
+
+
 
 ---
 class: middle
@@ -81,19 +84,19 @@ class: middle
   - [Download neste link](https://cran.r-project.org/)
   - Use a versão mais recente 😉
 
-```r
-R.version.string
-```
 
-```
-## [1] "R version 3.6.1 (2019-07-05)"
-```
   
 ]
 
 .pull-right[
 &lt;img src="img/R_logo.svg.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
+
+
+---
+class:middle
+
+&lt;img src="img/prints/install_R.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: middle
@@ -105,17 +108,18 @@ class: middle
   - Use a versão mais recente 😉
   
 
-```r
-# ver_RStudio &lt;- rstudioapi::versionInfo()
-# ver_RStudio$version
-# ‘1.2.1335’
-```
   
 ]
 
 .pull-right[
 &lt;img src="img/rstudio.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
+
+---
+class:middle
+
+&lt;img src="img/prints/install_RStudio.png" width="100%" style="display: block; margin: auto;" /&gt;
+
 ---
 class: middle
 # Pré-requisitos
@@ -139,36 +143,30 @@ class: middle
 
 
 ---
-class: 
+class: middle
+
 # Pré-requisitos
 
-## Git __OU__ GitHub Desktop
+
+
 .pull-left[
 
 - Git 
   - [Download neste link](https://git-scm.com/downloads)
-  - Linha de comando
+
   
-&lt;img src="https://git-scm.com/images/logo@2x.png" width="80%" style="display: block; margin: auto;" /&gt;
+
 ]
 
 
 .pull-right[
-
-- GitHub Desktop
-  - [Download neste link](https://desktop.github.com)
-  - Interface Gráfica - Graphical User Interface (GUI) 
-  
-&lt;img src="https://desktop.github.com/images/desktop-icon.svg" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://git-scm.com/images/logo@2x.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ]
 ---
-class: center, middle 
+class:middle
 
-## Linha de comando ou interface gráfica?
-## Use o que for melhor para **você**!
-
-&lt;img src="https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/prints/install-git.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -192,11 +190,34 @@ library(usethis)
 
 ---
 class: middle
-# Configurando o Git/GitHub Desktop, GitHub e RStudio
+# Configurando o Git
 
 - É necessário fazer apenas uma vez (por computador)!
+- Duas possibilidades: no Git, ou no RStudio.
+- Informar para o Git seu nome, e email.
+- Utilize o mesmo email associado à sua conta do GitHub.
+
+- No RStudio:
 
 
+```r
+usethis::use_git_config(user.name = "Beatriz Milz", # Seu nome
+                        user.email = "beatriz.milz@hotmail.com") # Seu email
+```
+
+---
+class: middle
+# Configurando o Git
+
+- No Git:
+
+`$ git config --global user.name "Beatriz Milz"`
+
+
+`$ git config --global user.email beatriz.milz@hotmail.com`
+
+
+&lt;img src="img/prints/configurar_git.PNG" width="80%" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -215,6 +236,24 @@ class: middle
 
 - `create_project()` - creates a non-package project, i.e. a data analysis project ([referência](https://usethis.r-lib.org/reference/create_package.html))
   - Argumento importante: `path` - 	A path. If it exists, it is used. If it does not exist, it is created, provided that the parent path exists.
+
+---
+class: center, middle 
+
+## Linha de comando ou interface gráfica?
+## Use o que for melhor para **você**!
+
+&lt;img src="https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Referências
+
+- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/):
+  - [Git e GitHub (Zen do R - Parte 4)](https://www.curso-r.com/blog/2019-07-23-zen-do-r-4/)
+  
+- Outra referência importante: [Happy Git and GitHub for the useR - 
+Jenny Bryan](https://happygitwithr.com/)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
