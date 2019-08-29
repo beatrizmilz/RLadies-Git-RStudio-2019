@@ -491,7 +491,66 @@ knitr::include_graphics("img/prints/criou-repositorio-github.PNG")
 
 ---
 
+## Função para criar um arquivo `README.md`
+```{r, echo=TRUE, eval=FALSE}
+usethis::use_readme_md()
+
+```
+- O arquivo será criado e aberto, para ser editado e salvo.
+
+```{r, out.width="30%"}
+knitr::include_graphics("https://media2.giphy.com/media/1iu8uG2cjYFZS6wTxv/giphy-downsized.gif")
+```
+
+---
 # Prática 2 - Clonando um repositório do GitHub
+
+- Crie um repositório no GitHub, ou abra a página de um repositório já existente
+
+
+- No RStudio, crie um novo projeto: File > New Project > Version Control > Git.
+
+---
+
+# Prática 3 - Fork + Clone
+
+```{r echo=TRUE, eval=FALSE}
+usethis::create_from_github("rstudio-education/remaster-the-tidyverse",
+                   destdir = "C:/Users/beatr/Documents/GitHub",
+                   fork = TRUE)
+# Creating 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse/'
+# ✔ Forking 'rstudio-education/remaster-the-tidyverse'
+# Which git protocol to use? (enter 0 to exit) 
+# 
+# 1: ssh   <-- presumes that you have set up ssh keys
+{{# 2: https <-- choose this if you don't have ssh keys (or don't know if you do)}}
+# 
+# Selection: 2
+# ● Tip: To suppress this menu in future, put
+#   `options(usethis.protocol = "https")`
+#   in your script or in a user- or project-level startup file, '.Rprofile'.
+#   Call `usethis::edit_r_profile()` to open it for editing.
+# ✔ Cloning repo from 'https://github.com/beatrizmilz/remaster-the-tidyverse.git' into 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse'
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse'
+# ✔ Adding 'upstream' remote: 'https://github.com/rstudio-education/remaster-the-tidyverse.git'
+# ✔ Pulling changes from GitHub source repo 'upstream/master'
+# ✔ Setting remote tracking branch for local 'master' branch to 'upstream/master'
+# ✔ Opening 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse/' in new RStudio session
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/RLadies-Git-RStudio-2019'
+```
+
+---
+## Crie uma branch
+
+```{r echo=TRUE, eval=FALSE}
+usethis::pr_init("nome_da_branch")
+
+# ✔ Checking that local branch 'master' has the changes in 'origin/master'
+# ✔ Creating local PR branch 'nome_da_branch'
+# ✔ Switching to branch 'nome_da_branch'
+# ● Use `pr_push()` to create PR
+```
+
 
 
 
