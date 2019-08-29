@@ -23,15 +23,26 @@ class: center, middle, inverse, title-slide
 
 
 
+layout: false
+class: split-33 with-border
 
+.column.bg-main3[.content.vmiddle[
+.center[
 # Beatriz Milz
+]
+&lt;br&gt;&lt;br&gt;
+&lt;img src="img/bea.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+]]
+.column[.content[
+
 - Doutoranda no Programa de Pós-Graduação em Ciência Ambiental (PROCAM) - Instituto de Energia e Ambiente - Universidade de São Paulo
 
   - Bolsita FAPESP - Processo nº 2018/23771-6 
   
   - Projeto Temático FAPESP Macroamb - Processo nº 2015/03804-9 
   
-&lt;img src="img/logos_bia.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/logos_bia.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 - Equipe da Secretaria Executiva  Editorial - [Revista Ambiente &amp; Sociedade](http://scielo.br/asoc)
 
@@ -43,10 +54,12 @@ class: center, middle, inverse, title-slide
   - Mestre em Ciências - UNIFESP
   - Bacharel em Gestão Ambiental - EACH/USP
 
+
+]]
 ---
 class: middle
 
-&lt;img src="https://media3.giphy.com/media/VMmRM3EjhjBII/giphy-downsized.gif" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media3.giphy.com/media/VMmRM3EjhjBII/giphy-downsized.gif" width="30%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: middle
@@ -54,26 +67,52 @@ class: middle
 &lt;img src="https://media1.giphy.com/media/qvWavuCEwjEPu/giphy.gif" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
+layout: false
+class: split-33 with-border
 
-# Sobre essa palestra:
-
-- **Objetivo**: Auxiliar nos primeiros passos a utilizar o `Git` e `GitHub` diretamente do `RStudio`. 
-
-- **Estrutura**:
-
-  - Pré-requisitos
-
-  - Configurando o Git
-
-  - Configurando o GitHub
-
-  - Criando um repositório no GitHub diretamente do RStudio, utilizando um projeto (`.Rproj`)
-
-  - Interface gráfica do RStudio - aba `Git`
-  
-  - Outras interfaces gráficas - GUI
+.column.bg-main3[.content.vmiddle[
+.center[
+# Sobre essa palestra]
+&lt;br&gt;&lt;br&gt;
 
 
+- **Objetivo**: Auxiliar nos primeiros passos a utilizar o `Git` e `GitHub` diretamente do `RStudio`.
+
+]]
+
+.column.bg-main1[
+  .split-five[
+  .row.bg-main1[.content[
+  ## Pré-requisitos
+  ]]
+  .row.bg-main2[.content[
+  ##  Configurando o `Git`
+  ]]
+  .row.bg-main3[.content[
+  ##  Configurando o `GitHub`
+  ]]
+  .row.bg-main4[.content[
+  ##  Trabalhando com projetos no `RStudio` + `GitHub`
+  ]]
+  .row.bg-main5[.content[
+  ##  Interface gráfica do RStudio - aba `Git`
+  ]]
+]]
+
+
+
+---
+layout: false
+class: bg-main3 split-30 hide-slide-number
+
+.column[
+
+]
+.column.slide-in-right[.content.vmiddle[
+.sliderbox.shade_main.pad1[
+.font5[Pré-requisitos]
+]
+]]
 
 ---
 class: middle
@@ -166,7 +205,7 @@ class: middle
 ---
 class:middle
 
-&lt;img src="img/prints/install-git.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/prints/install-git.png" width="70%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -187,17 +226,35 @@ library(usethis)
 &lt;img src="https://usethis.r-lib.org/reference/figures/logo.png" style="display: block; margin: auto;" /&gt;
 ]
 
+---
+layout: false
+class: bg-main3 split-30 hide-slide-number
+
+.column[
+
+]
+.column.slide-in-right[.content.vmiddle[
+.sliderbox.shade_main.pad1[
+.font5[.center[Configurando o Git]]
+]
+]]
+
+
+
 
 ---
 class: middle
 # Configurando o Git
 
 - É necessário fazer apenas uma vez (por computador)!
+
 - Duas possibilidades: no Git, ou no RStudio.
+
 - Informar para o Git seu nome, e email.
+
 - Utilize o mesmo email associado à sua conta do GitHub.
 
-- No RStudio:
+  - No RStudio:
 
 
 ```r
@@ -209,7 +266,7 @@ usethis::use_git_config(user.name = "Beatriz Milz", # Seu nome
 class: middle
 # Configurando o Git
 
-- No Git:
+  - No Git:
 
 `$ git config --global user.name "Beatriz Milz"`
 
@@ -219,23 +276,212 @@ class: middle
 
 &lt;img src="img/prints/configurar_git.PNG" width="80%" style="display: block; margin: auto;" /&gt;
 
+---
+layout: false
+class: bg-main3 split-30 hide-slide-number
+
+.column[
+
+]
+.column.slide-in-right[.content.vmiddle[
+.sliderbox.shade_main.pad1[
+.font5[.center[Configurando o GitHub + RStudio]]
+]
+]]
+---
+class: middle
+# Configurando o GitHub + RStudio
+
+- Criar um novo token no GitHub:
 
 
+```r
+usethis::browse_github_token()
+# ✔ Opening URL 'https://github.com/settings/tokens/new?scopes=repo,gist&amp;description=R:GITHUB_PAT'
+# ● Call `usethis::edit_r_environ()` to open '.Renviron'.
+# ● Store your PAT with a line like:
+*#   GITHUB_PAT=xxxyyyzzz
+#   [Copied to clipboard]
+# ● Make sure '.Renviron' ends with a newline!
+```
+
+- Uma página do GitHub irá abrir, com as configurações necessárias. Crie o novo token.
+
+---
+- Copie o token gerado:
+
+&lt;img src="img/prints/copy-token.png" width="100%" style="display: block; margin: auto;" /&gt;
+---
+- Abra o arquivo `.Renviron`:
+
+```r
+usethis::edit_r_environ()
+# ● Modify 'C:/Users/beatr/Documents/.Renviron'
+# ● Restart R for changes to take effect
+```
+
+- Crie uma nova linha na forma `GITHUB_PAT=SEU_TOKEN`, adicione o token, pule uma linha e salve o arquivo.
+&lt;img src="img/prints/githubpath.png" width="60%" style="display: block; margin: auto;" /&gt;
+- **Reinicie o RStudio**:  CTRL + SHIFT + F10
+
+---
+layout: false
+class: bg-main3 split-30 hide-slide-number
+
+.column[
+
+]
+.column.slide-in-right[.content.vmiddle[
+.sliderbox.shade_main.pad1[
+.font5[.center[Trabalhando com projetos no RStudio + GitHub]]
+]
+]]
+
+---
+
+# Prática 1 - Criando um repositório novo, diretamente do R
+
+- Vamos usar a função `create_project()` 
+  - Cria um projeto `.Rproj`
+  - Argumento importante: `path` - 	É o "caminho" para o diretório (pasta). Se o diretório já existe, é utilizado. Se não existe, é criado. 
+  - Cuidado com o nome do projeto, pois será o mesmo nome que será utilizado no repositório. Você não deve usar o nome de algum repositório já existente no seu GitHub.
 
 
+- No meu caso, tenho o hábito de deixar todos os repositórios do GitHub, na pasta `GitHub/`. No exemplo abaixo, dentro da pasta GitHub, criei o projeto chamado Teste-MeetupR. Esse será o nome da pasta criada e posteriormente do repositório no GitHub.
 
 
+```r
+usethis::create_project("GitHub/Teste-MeetupR") 
+# ✔ Creating 'GitHub/Teste-MeetupR/'
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/Teste-MeetupR'
+# ✔ Creating 'R/'
+# ✔ Writing 'Teste-MeetupR.Rproj'
+# ✔ Adding '.Rproj.user' to '.gitignore'
+# ✔ Opening 'GitHub/Teste-MeetupR/' in new RStudio session
+# ✔ Setting active project to '&lt;no active project&gt;'
+```
+- O RStudio abrirá outra janela, com o novo projeto criado.
+---
+## Novo projeto criado! 
+
+- Projeto ✔️
+
+- Git ❌
+
+- GitHub ❌
+
+&lt;img src="img/prints/novo_projeto.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+```r
+usethis::use_git()
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/Teste-MeetupR'
+# ✔ Initialising Git repo
+# ✔ Adding '.Rhistory', '.RData' to '.gitignore'
+# There are 2 uncommitted files:
+# * '.gitignore'
+# * 'Teste-MeetupR.Rproj'
+# Is it ok to commit them?
+# 
+*# 1: Absolutely  
+# 2: Negative
+# 3: No
+# 
+# Selection: 1
+# ✔ Adding files
+# ✔ Commit with message 'Initial commit'
+# ● A restart of RStudio is required to activate the Git pane
+# Restart now?
+# 
+# 1: No way
+*# 2: For sure
+# 3: Negative
+# 
+# Selection: 2
+```
+
+- O RStudio irá reiniciar para que apareça o painel do Git
+---
+## Usando Git
+
+- Projeto ✔️
+
+- Git ✔️
+
+- GitHub ❌
+
+&lt;img src="img/prints/novo_projeto_com_git.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+```r
+usethis::use_github()
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/Teste-MeetupR'
+# ✔ Checking that current branch is 'master'
+# Which git protocol to use? (enter 0 to exit) 
+# 
+# 1: ssh   &lt;-- presumes that you have set up ssh keys
+*# 2: https &lt;-- choose this if you don't have ssh keys (or don't know if you do)
+# 
+# Selection: 2
+# ● Tip: To suppress this menu in future, put
+#   `options(usethis.protocol = "https")`
+#   in your script or in a user- or project-level startup file, '.Rprofile'.
+#   Call `usethis::edit_r_profile()` to open it for editing.
+# ● Check title and description
+#   Name:        Teste-MeetupR
+#   Description: 
+# Are title and description ok?
+# 
+# 1: No way
+*# 2: Definitely
+# 3: Nope
+# 
+# Selection: 2
+# ✔ Creating GitHub repository
+# ✔ Setting remote 'origin' to 'https://github.com/beatrizmilz/Teste-MeetupR.git'
+# ✔ Pushing 'master' branch to GitHub and setting remote tracking branch
+# ✔ Opening URL 'https://github.com/beatrizmilz/Teste-MeetupR'
+```
+
+---
+## Repositório criado!
+
+- Projeto ✔️
+
+- Git ✔️
+
+- GitHub ✔️
+
+&lt;img src="img/prints/criou-repositorio-github.PNG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Prática 2 - Clonando um repositório do GitHub
 
 
 
 ---
+layout: false
+class: bg-main3 split-30 hide-slide-number
+
+.column[
+
+]
+.column.slide-in-right[.content.vmiddle[
+.sliderbox.shade_main.pad1[
+.font5[.center[Interface gráfica do RStudio - aba Git]]
+]
+]]
+---
 class: middle
-# Pacote `usethis`
 
-- Todas as funções [aqui](https://usethis.r-lib.org/reference/index.html)
+## EM BREVE
 
-- `create_project()` - creates a non-package project, i.e. a data analysis project ([referência](https://usethis.r-lib.org/reference/create_package.html))
-  - Argumento importante: `path` - 	A path. If it exists, it is used. If it does not exist, it is created, provided that the parent path exists.
+O RStudio oferece um cliente Git simples, na aba "Git". 
 
 ---
 class: center, middle 
@@ -243,9 +489,10 @@ class: center, middle
 ## Linha de comando ou interface gráfica?
 ## Use o que for melhor para **você**!
 
-&lt;img src="https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
+class: middle  bg-main4
 
 # Referências
 
@@ -254,10 +501,13 @@ class: center, middle
   
 - Outra referência importante: [Happy Git and GitHub for the useR - 
 Jenny Bryan](https://happygitwithr.com/)
+
+- Documentação do pacote [usethis](https://usethis.r-lib.org/reference/create_package.html)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"ratio": "16:9",
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false
