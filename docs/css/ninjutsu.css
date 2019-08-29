@@ -3,7 +3,14 @@
  See https://emitanaka.github.io/ninja-theme for an example.
 
 ******************/
-
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
 
 :root {
   --color-red: #f44336;
@@ -644,36 +651,36 @@
 .fade-col4 * > .column:nth-of-type(4)>.content{opacity: 0.3;}
 .fade-col5 * > .column:nth-of-type(5)>.content{opacity: 0.3;}
 
-.gray-col1 * > .column:first-of-type>.content, 
+.gray-col1 * > .column:first-of-type>.content,
 .gray-col2 * > .column:nth-of-type(2)>.content,
 .gray-col3 * > .column:nth-of-type(3)>.content,
 .gray-col4 * > .column:nth-of-type(4)>.content,
 .gray-col5 * > .column:nth-of-type(5)>.content,
-.gray-col1 > .column:first-of-type>.content, 
+.gray-col1 > .column:first-of-type>.content,
 .gray-col2 > .column:nth-of-type(2)>.content,
 .gray-col3 > .column:nth-of-type(3)>.content,
 .gray-col3 > .column:nth-of-type(4)>.content,
 .gray-col3 > .column:nth-of-type(5)>.content
-{    
+{
      -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: gray; 
+    filter: gray;
 }
 
-.gray-col1 * > .column:first-of-type, 
+.gray-col1 * > .column:first-of-type,
 .gray-col2 * > .column:nth-of-type(2),
 .gray-col3 * > .column:nth-of-type(3),
 .gray-col4 * > .column:nth-of-type(4),
 .gray-col5 * > .column:nth-of-type(5),
-.gray-col1 > .column:first-of-type, 
+.gray-col1 > .column:first-of-type,
 .gray-col2 > .column:nth-of-type(2),
 .gray-col3 > .column:nth-of-type(3),
 .gray-col3 > .column:nth-of-type(4),
 .gray-col3 > .column:nth-of-type(5)
-{    
+{
      background-color: rgba(197, 197, 197, 1)
 }
 
@@ -793,7 +800,7 @@
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: gray; 
+    filter: gray;
 }
 
 .gray-blade1 > .blade1,
@@ -839,13 +846,13 @@
 .gray-row3 * > .row:nth-of-type(3)>.content,
 .gray-row4 * > .row:nth-of-type(4)>.content,
 .gray-row5 * > .row:nth-of-type(5)>.content
-{    
+{
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: gray; 
+    filter: gray;
 }
 
 .gray-row1 > .row:first-of-type,
@@ -858,7 +865,7 @@
 .gray-row3 * > .row:nth-of-type(3),
 .gray-row4 * > .row:nth-of-type(4),
 .gray-row5 * > .row:nth-of-type(5)
-{    
+{
      background-color: rgba(197, 197, 197,1)
 }
 
@@ -1014,13 +1021,13 @@
 .gray-row5-col4 > .row:nth-of-type(5) .column:nth-of-type(4)>.content,
 .gray-row5-col5 > .column:nth-of-type(5) .row:nth-of-type(5)>.content,
 .gray-row5-col5 > .row:nth-of-type(5) .column:nth-of-type(5)>.content
-{ 
+{
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: gray; 
+    filter: gray;
 }
 
 .gray-row1-col1 > .column:first-of-type .row:first-of-type,
