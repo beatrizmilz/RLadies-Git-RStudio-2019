@@ -1,0 +1,66 @@
+---
+# Para transformar em PDF, usar: 
+# pagedown::chrome_print("docs/index.html")
+title: "Primeiros passos utilizando o Git e GitHub no RStudio"
+#subtitle: ""
+author: "Beatriz Milz"
+institute: "R-Ladies São Paulo"
+date: "12/09/2019"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    css: ["css/kunoichi.css", "css/ninjutsu.css", "css/rladies-fonts.css"]
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning=FALSE, cache = TRUE)
+```
+
+
+# Beatriz Milz
+- Doutoranda no Programa de Pós-Graduação em Ciência Ambiental (PROCAM) - Instituto de Energia e Ambiente - Universidade de São Paulo
+
+  - Bolsita FAPESP - Processo nº 2018/23771-6 
+  
+  - Projeto Temático FAPESP Macroamb - Processo nº 2015/03804-9 
+  
+```{r, out.width="70%"}
+knitr::include_graphics("img/logos_bia.png")
+```
+
+- Equipe da Secretaria Executiva  Editorial - [Revista Ambiente & Sociedade](http://scielo.br/asoc)
+
+- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) `r emo::ji("purple_heart")`
+
+- [Currículo disponível neste link](https://beatrizmilz.github.io/resume/index.pdf)
+
+- Anteriormente:
+  - Mestre em Ciências - UNIFESP
+  - Bacharel em Gestão Ambiental - EACH/USP
+
+
+---
+
+# Sobre essa palestra:
+
+- **Objetivo**: Auxiliar nos primeiros passos a utilizar o `Git` e `GitHub` diretamente do `RStudio`. 
+
+- **Estrutura**:
+  - Pré-requisitos
+  - Configurando o Git
+  - Configurando o GitHub
+  - Criando um repositório no GitHub diretamente do RStudio, utilizando um projeto (`.Rproj`)
+  - Interface gráfica do RStudio - aba `Git`
+
+- Parte deste material foi baseado/inspirado neste post do blog da [Curso-R](https://www.curso-r.com/):
+  - [Git e GitHub (Zen do R - Parte 4)](https://www.curso-r.com/blog/2019-07-23-zen-do-r-4/)
+
+
