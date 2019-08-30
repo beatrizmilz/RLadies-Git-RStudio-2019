@@ -86,7 +86,7 @@ class: split-33 with-border
 <br><br>
 
 
-- **Objetivo**: Auxiliar nos primeiros passos a utilizar o `Git` e `GitHub` diretamente do `RStudio`.
+- **Objetivo**: Auxiliar nos primeiros passos para utilizar o `Git` e `GitHub` diretamente do `RStudio`.
 
 ]]
 
@@ -583,6 +583,8 @@ class: middle
 
 - O RStudio oferece um cliente Git **simples**, na aba "Git" (em inglês, é chamado de Git Pane).
 
+- Esse painel somente aparecerá em projetos que estejam versionados com Git.
+
 ```{r}
 knitr::include_graphics("img/prints/git-pane.PNG")
 ```
@@ -598,7 +600,7 @@ knitr::include_graphics("img/prints/git-pane-branch.png")
 ---
 class: middle
 
-# Botão Diff -> Review changes
+## Botão Diff -> Review changes
 
 ```{r, out.width="90%"}
 knitr::include_graphics("img/prints/git-pane-diff.PNG")
@@ -607,11 +609,40 @@ knitr::include_graphics("img/prints/git-pane-diff.PNG")
 ---
 class: middle
 
-# Botão `r emo::ji("clock3")` (history) -> Review changes
+## Botão `r emo::ji("clock3")` (history) -> Review changes
 
 ```{r, out.width="90%"}
 knitr::include_graphics("img/prints/git-pane-history.PNG")
 ```
+
+
+---
+class: middle
+
+## Git pane - Staged  `r emo::ji("white_check_mark")`
+
+```{r}
+knitr::include_graphics("img/prints/git-pane-stage.png")
+```
+
+---
+class: middle
+
+## Git pane - Commit
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/prints/git-pane-commit.PNG")
+```
+
+---
+class: middle
+
+## Git pane - Commit
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/prints/git_commit.PNG")
+```
+
 ---
 class: center, middle 
 
