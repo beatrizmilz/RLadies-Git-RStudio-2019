@@ -498,32 +498,23 @@ class: middle  bg-main4
 
 
 ```r
-usethis::create_from_github("rstudio-education/remaster-the-tidyverse", #usuário/repositório
+usethis::create_from_github("rstudio-education/datascience-box", #usuário/repositório
                    destdir = "C:/Users/beatr/Documents/GitHub", #diretório onde quer que os arquivos sejam salvos
                    fork = TRUE)
-# Creating 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse/'
-# ✔ Forking 'rstudio-education/remaster-the-tidyverse'
-# Which git protocol to use? (enter 0 to exit) 
-# 
-# 1: ssh   &lt;-- presumes that you have set up ssh keys
-*# 2: https &lt;-- choose this if you don't have ssh keys (or don't know if you do)
-# 
-# Selection: 2
-# ● Tip: To suppress this menu in future, put
-#   `options(usethis.protocol = "https")`
-#   in your script or in a user- or project-level startup file, '.Rprofile'.
-#   Call `usethis::edit_r_profile()` to open it for editing.
-# ✔ Cloning repo from 'https://github.com/beatrizmilz/remaster-the-tidyverse.git' into 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse'
-# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse'
-# ✔ Adding 'upstream' remote: 'https://github.com/rstudio-education/remaster-the-tidyverse.git'
+# ✔ Creating 'C:/Users/beatr/Documents/GitHub/datascience-box/'
+# ✔ Forking 'rstudio-education/datascience-box'
+# ✔ Cloning repo from 'https://github.com/beatrizmilz/datascience-box.git' into 'C:/Users/beatr/Documents/GitHub/datascience-box'
+# ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/datascience-box'
+# ✔ Adding 'upstream' remote: 'https://github.com/rstudio-education/datascience-box.git'
 # ✔ Pulling changes from GitHub source repo 'upstream/master'
 # ✔ Setting remote tracking branch for local 'master' branch to 'upstream/master'
-# ✔ Opening 'C:/Users/beatr/Documents/GitHub/remaster-the-tidyverse/' in new RStudio session
+# ✔ Opening 'C:/Users/beatr/Documents/GitHub/datascience-box/' in new RStudio session
 # ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/RLadies-Git-RStudio-2019'
 ```
 
+Projeto [Data Science in a Box](https://github.com/rstudio-education/datascience-box/)
 ---
-## Crie uma branch
+## Crie um branch
 
 
 ```r
@@ -547,16 +538,37 @@ class: bg-main3 split-30 hide-slide-number
 ]
 .column.slide-in-right[.content.vmiddle[
 .sliderbox.shade_main.pad1[
-.font5[.center[Interface gráfica do RStudio - aba Git]]
+.font5[.center[Interface gráfica do RStudio]]
 ]
 ]]
 ---
 class: middle
 
-## EM BREVE
+## Interface Gráfica RStudio
 
-O RStudio oferece um cliente Git simples, na aba "Git". 
+- O RStudio oferece um cliente Git **simples**, na aba "Git" (em inglês, é chamado de Git Pane).
 
+&lt;img src="img/prints/git-pane.PNG" width="960" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+## Branch
+
+&lt;img src="img/prints/git-pane-branch.png" width="960" style="display: block; margin: auto;" /&gt;
+---
+class: middle
+
+# Botão Diff -&gt; Review changes
+
+&lt;img src="img/prints/git-pane-diff.PNG" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+# Botão 🕒 (history) -&gt; Review changes
+
+&lt;img src="img/prints/git-pane-history.PNG" width="90%" style="display: block; margin: auto;" /&gt;
 ---
 class: center, middle 
 
