@@ -623,6 +623,8 @@ pr_push()
 # ✔ Opening URL 'https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/compare/teste'
 ```
 
+- A página do GitHub será aberta, para que possa completar o Pull Request.
+---
 
 
 ---
