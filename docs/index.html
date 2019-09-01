@@ -563,16 +563,67 @@ usethis::create_from_github("rstudio-education/datascience-box",
 
 
 ```r
-usethis::pr_init(branch = "nome_da_branch")
+usethis::pr_init(branch = "teste")
 
 # ✔ Checking that local branch 'master' has the changes in 'origin/master'
-# ✔ Creating local PR branch 'nome_da_branch'
-# ✔ Switching to branch 'nome_da_branch'
+# ✔ Creating local PR branch 'teste'
+# ✔ Switching to branch 'teste'
 # ● Use `pr_push()` to create PR
 ```
 
+- Faça suas contribuições, e sempre faça commits com mensagens que deixem claro as mudanças.
+
+- Quando terminar as contribuições necessárias, utilizar a função `pr_push()`:
 
 
+```r
+pr_push()
+# ✔ Pushing local 'teste' branch to 'origin:teste'
+# ✔ Setting upstream tracking branch for 'teste' to 'origin/teste'
+# ✔ Create PR at link given below
+# ✔ Opening URL 'https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/compare/teste'
+```
+
+- A página do GitHub será aberta, para que possa completar o Pull Request.
+---
+class: middle 
+
+## Crie um Pull Request: 
+&lt;img src="img/prints/pr-push.PNG" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle 
+
+## Open a Pull Request: 
+&lt;img src="img/prints/pr-push2.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle 
+
+## Exemplo: PR foi aberto
+&lt;img src="img/prints/pr-push3.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+- Depois dessa etapa, você deve esperar o mantenedor do repositório responder aceitando seu PR, fazendo sujestões para melhorias, etc.
+---
+class: middle 
+
+## Depois que o PR é aceito:  Merged
+
+&lt;img src="img/prints/pr-push4.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle 
+
+## Última etapa: voltar para a master, atualizar (pull) o conteúdo e deletar a branch criada
+
+```r
+pr_finish()
+# ✔ Switching back to 'master' branch
+# ✔ Pulling changes from GitHub source repo 'origin/master'
+# ✔ Deleting local 'teste' branch
+```
+
+- Pronto! 
 
 ---
 layout: false
@@ -687,6 +738,15 @@ class:  middle
     - Dica: use no primeiro argumento (`repo_spec = `) o repositório  "beatrizmilz/RLadies-Git-RStudio-2019"
 
 - Caso encontre algum erro no caminho, **[submeta uma issue neste repositório](https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/issues/new)** para que o material seja aprimorado. 
+
+
+---
+class:  middle bg-black white
+# Preparadas para a Hacktoberfest 2019? 
+## 
+https://hacktoberfest.digitalocean.com/
+
+&lt;img src="https://hacktoberfest.digitalocean.com/pretty_logo.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 class: middle  bg-main4

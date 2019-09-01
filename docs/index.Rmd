@@ -615,7 +615,7 @@ usethis::pr_init(branch = "teste")
 
 - Quando terminar as contribuições necessárias, utilizar a função `pr_push()`:
 
-```{r}
+```{r echo=TRUE, eval=FALSE}
 pr_push()
 # ✔ Pushing local 'teste' branch to 'origin:teste'
 # ✔ Setting upstream tracking branch for 'teste' to 'origin/teste'
@@ -625,7 +625,51 @@ pr_push()
 
 - A página do GitHub será aberta, para que possa completar o Pull Request.
 ---
+class: middle 
 
+## Crie um Pull Request: 
+```{r out.width="80%"}
+knitr::include_graphics("img/prints/pr-push.PNG")
+```
+
+---
+class: middle 
+
+## Open a Pull Request: 
+```{r out.width="80%"}
+knitr::include_graphics("img/prints/pr-push2.png")
+```
+
+---
+class: middle 
+
+## Exemplo: PR foi aberto
+```{r out.width="80%"}
+knitr::include_graphics("img/prints/pr-push3.png")
+```
+
+- Depois dessa etapa, você deve esperar o mantenedor do repositório responder aceitando seu PR, fazendo sujestões para melhorias, etc.
+---
+class: middle 
+
+## Depois que o PR é aceito:  Merged
+
+```{r out.width="80%"}
+knitr::include_graphics("img/prints/pr-push4.png")
+```
+
+---
+class: middle 
+
+## Última etapa: voltar para a master, atualizar (pull) o conteúdo e deletar a branch criada
+```{r echo=TRUE, eval=FALSE}
+pr_finish()
+# ✔ Switching back to 'master' branch
+# ✔ Pulling changes from GitHub source repo 'origin/master'
+# ✔ Deleting local 'teste' branch
+```
+
+- Pronto! 
 
 ---
 layout: false
@@ -758,6 +802,17 @@ class:  middle
     - Dica: use no primeiro argumento (`repo_spec = `) o repositório  "beatrizmilz/RLadies-Git-RStudio-2019"
 
 - Caso encontre algum erro no caminho, **[submeta uma issue neste repositório](https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/issues/new)** para que o material seja aprimorado. 
+
+
+---
+class:  middle bg-black white
+# Preparadas para a Hacktoberfest 2019? 
+## 
+https://hacktoberfest.digitalocean.com/
+
+```{r out.width="50%"}
+knitr::include_graphics("https://hacktoberfest.digitalocean.com/pretty_logo.png")
+```
 
 ---
 class: middle  bg-main4
