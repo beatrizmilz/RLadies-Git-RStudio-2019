@@ -2,7 +2,7 @@
 # Para transformar em PDF, usar: 
 # pagedown::chrome_print("docs/index.html")
 title: "Primeiros passos utilizando o Git e GitHub no RStudio"
-#subtitle: ""
+subtitle: "Acesse: **bit.ly/rladiesGit**"
 author: "Beatriz Milz"
 institute: "R-Ladies São Paulo"
 date: "12/09/2019"
