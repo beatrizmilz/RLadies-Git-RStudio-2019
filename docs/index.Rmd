@@ -379,17 +379,52 @@ class: bg-main3 split-30 hide-slide-number
 .font5[.center[Trabalhando com projetos no RStudio + GitHub]]
 ]
 ]]
+---
+# Método 1 - Clonando um repositório do GitHub
+
+- Crie um repositório no GitHub, ou abra a página de um repositório já existente.
+
+- No RStudio, crie um novo projeto: File > New Project 
+.pull-left[
+- Na aba "Create Project", selecione a opção **Version Control**.
+
+```{r out.width="100%"}
+knitr::include_graphics("img/prints/proj-version-control-1.PNG")
+```
+]
+
+.pull-right[
+
+- Na aba "Create Project from Version Control", selecione a opção **Git**.
+```{r out.width="100%"}
+knitr::include_graphics("img/prints/proj-version-control-2.PNG")
+```
+]
+
+
+
 
 ---
+- Na aba "Clone Git Repository":
+  - **Repository URL**: Cole o link para o repositório
+  - **Project directory name**: Após inserir o repository URL, esse campo será preenchido automaticamente.
+  - **Create project as subdirectory of**: Selecione o diretório onde você deseja manter sua cópia local do repositório.
+```{r out.width="50%"}
+knitr::include_graphics("img/prints/proj-version-control-3.PNG")
+```
 
-# Prática 1 - Criando um repositório novo, diretamente do R
+- O **RStudio** irá fazer o clone do repositório, e abrirá um RProj para ele (caso não exista um ainda, será criado).
+---
+
+# Método 2 - Criando um repositório novo, diretamente do RStudio
 
 - Vamos usar a função `create_project()` 
   - Cria um projeto `.Rproj`
-  - Argumento importante: `path` - 	É o "caminho" para o diretório (pasta). Se o diretório já existe, é utilizado. Se não existe, é criado. 
+  - Argumento importante: `path = ` 	É o "caminho" para o diretório (pasta). Se o diretório já existe, é utilizado. Se não existe, é criado. 
   - Cuidado com o nome do projeto, pois será o mesmo nome que será utilizado no repositório. Você não deve usar o nome de algum repositório já existente no seu GitHub.
 
-
+---
+## Criando um projeto
 - No meu caso, tenho o hábito de deixar todos os repositórios do GitHub, na pasta `GitHub/`. No exemplo abaixo, dentro da pasta GitHub, criei o projeto chamado Teste-MeetupR. Esse será o nome da pasta criada e posteriormente do repositório no GitHub.
 
 ```{r echo=TRUE, eval=FALSE}
@@ -527,21 +562,27 @@ class: middle  bg-main4
 knitr::include_graphics("img/gifs/create-proj2.gif")
 ```
 
----
-# Prática 2 - Clonando um repositório do GitHub
 
-- Crie um repositório no GitHub, ou abra a página de um repositório já existente
-
-
-- No RStudio, crie um novo projeto: File > New Project > Version Control > Git.
 
 ---
 
-# Prática 3 - Fork + Clone
+# Método 3 - A partir de um repositório existente, fazer um fork e clonar diretamente do RStudio
+
+- Para isso, usaremos a função `usethis::create_from_github()`.
+- Argumentos importantes:
+  - `repo_spec = ` repositório que quer trabalhar. Deve estar no formato: "usuario_github/repositorio". Veja o exemplo abaixo.
+  - `destdir =` diretório onde quer que os arquivos sejam salvos
+  - `fork =` se igual a TRUE, irá fazer o fork do repositório. Só funcionará se o token do GitHub foi configurado corretamente.
+
+---
+### Exemplo do uso da função `create_from_github()`
+- Exemplo: fork e clone do projeto [Data Science in a Box](https://github.com/rstudio-education/datascience-box/):
+
+https://github.com/rstudio-education/datascience-box/
 
 ```{r echo=TRUE, eval=FALSE}
-usethis::create_from_github("rstudio-education/datascience-box", #usuário/repositório
-                   destdir = "C:/Users/beatr/Documents/GitHub", #diretório onde quer que os arquivos sejam salvos
+usethis::create_from_github("rstudio-education/datascience-box",
+                   destdir = "C:/Users/beatr/Documents/GitHub", 
                    fork = TRUE)
 # ✔ Creating 'C:/Users/beatr/Documents/GitHub/datascience-box/'
 # ✔ Forking 'rstudio-education/datascience-box'
@@ -554,12 +595,15 @@ usethis::create_from_github("rstudio-education/datascience-box", #usuário/repos
 # ✔ Setting active project to 'C:/Users/beatr/Documents/GitHub/RLadies-Git-RStudio-2019'
 ```
 
-Projeto [Data Science in a Box](https://github.com/rstudio-education/datascience-box/)
+
 ---
 ## Crie um branch
 
+- Antes de fazer qualquer modificação, crie uma branch, usando a função `usethis::pr_init()`. 
+- Argumento importante: `branch =` indica o nome da branch que você quer criar. 
+
 ```{r echo=TRUE, eval=FALSE}
-usethis::pr_init("nome_da_branch")
+usethis::pr_init(branch = "nome_da_branch")
 
 # ✔ Checking that local branch 'master' has the changes in 'origin/master'
 # ✔ Creating local PR branch 'nome_da_branch'
@@ -591,10 +635,19 @@ class: middle
 
 - Esse painel somente aparecerá em projetos que estejam versionados com Git.
 
-```{r}
+```{r, out.width="95%"}
 knitr::include_graphics("img/prints/git-pane.PNG")
 ```
+---
+class: middle
 
+## Interface Gráfica RStudio
+
+```{r, out.width="95%"}
+knitr::include_graphics("img/prints/cheatsheet.PNG")
+```
+
+Fonte: [RStudio Cheatsheet](https://www.rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf)
 ---
 class: middle
 
