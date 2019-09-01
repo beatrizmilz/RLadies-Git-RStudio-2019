@@ -603,15 +603,28 @@ usethis::create_from_github("rstudio-education/datascience-box",
 - Argumento importante: `branch =` indica o nome da branch que você quer criar. 
 
 ```{r echo=TRUE, eval=FALSE}
-usethis::pr_init(branch = "nome_da_branch")
+usethis::pr_init(branch = "teste")
 
 # ✔ Checking that local branch 'master' has the changes in 'origin/master'
-# ✔ Creating local PR branch 'nome_da_branch'
-# ✔ Switching to branch 'nome_da_branch'
+# ✔ Creating local PR branch 'teste'
+# ✔ Switching to branch 'teste'
 # ● Use `pr_push()` to create PR
 ```
 
+- Faça suas contribuições, e sempre faça commits com mensagens que deixem claro as mudanças.
 
+- Quando terminar as contribuições necessárias, utilizar a função `pr_push()`:
+
+```{r}
+pr_push()
+# ✔ Pushing local 'teste' branch to 'origin:teste'
+# ✔ Setting upstream tracking branch for 'teste' to 'origin/teste'
+# ✔ Create PR at link given below
+# ✔ Opening URL 'https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/compare/teste'
+```
+
+- A página do GitHub será aberta, para que possa completar o Pull Request.
+---
 
 
 ---
