@@ -655,7 +655,7 @@ class: middle
 ## Depois que o PR é aceito:  Merged
 
 ```{r out.width="80%"}
-knitr::include_graphics("img/prints/pr-push4.png")
+knitr::include_graphics("img/prints/pr-push4.PNG")
 ```
 
 ---
