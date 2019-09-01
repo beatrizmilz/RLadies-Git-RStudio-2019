@@ -769,6 +769,8 @@ class: center, middle
 knitr::include_graphics("https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif")
 ```
 
+Confira a [cheatsheet do Git](https://github.github.com/training-kit/downloads/pt_BR/github-git-cheat-sheet.pdf)!
+
 ---
 class:  middle 
 
