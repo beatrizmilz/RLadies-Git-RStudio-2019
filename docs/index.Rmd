@@ -713,6 +713,40 @@ knitr::include_graphics("https://media0.giphy.com/media/dNgK7Ws7y176U/giphy.gif"
 ```
 
 ---
+class:  middle 
+
+# Check-list da configuração! 
+
+## Para o tempo restante (ou para `r emo::ji("house")`) 
+
+
+1) Verifique se você tem instalado no seu computador: R, RStudio e Git.
+
+2) Caso não esteja configurado, configure o Git: conte para ele seu nome e seu email `r emo::ji("smiley")`
+
+3) No RStudio, verifique se você tem o pacote `usethis` instalado. Caso não esteja instalado, instale. Utilize a função `library(usethis)` para deixar a função `usethis` disponível para uso.
+
+4) No RStudio, configure o GitHub token.
+
+
+- Caso encontre algum erro no caminho, **[submeta uma issue neste repositório](https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/issues/new)** para que o material seja aprimorado. 
+---
+class:  middle 
+
+# Práticas! 
+
+## Para o tempo restante (ou para `r emo::ji("house")`) 
+
+1) Utilizando o método 1, clone um repositório que deseja que esteja disponível localmente (escolha um repositório leve).
+
+2) Utilizando o método 2, crie um novo repositório diretamente do RStudio, para testar. 
+
+3) Utilizando o método 3, faça um fork do repositório desta apresentação. No arquivo `README.md`, existe a seção participantes. Adicione uma nova linha com o seu nome, e algum link de uma página sua (pode ser blog, Twitter, Linkedin, GitHub, etc). Faça um pull request `r emo::ji("smiley")`.
+    - Dica: use no primeiro argumento (`repo_spec = `) o repositório  "beatrizmilz/RLadies-Git-RStudio-2019"
+
+- Caso encontre algum erro no caminho, **[submeta uma issue neste repositório](https://github.com/beatrizmilz/RLadies-Git-RStudio-2019/issues/new)** para que o material seja aprimorado. 
+
+---
 class: middle  bg-main4
 
 # Referências

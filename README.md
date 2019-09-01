@@ -8,3 +8,6 @@ Esse repositório contém os códigos e apresentação da palestra: Primeiros pa
 
 
 
+Participantes:
+
+- [NOME COMPLETO](https://link-para-alguma-pagina.com)
