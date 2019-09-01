@@ -56,6 +56,8 @@ knitr::include_graphics("img/logos_bia.png")
 
 - [Currículo disponível neste link](https://beatrizmilz.github.io/resume/index.pdf)
 
+- Blog e slides: [beatrizmilz.com](https://beatrizmilz.com/)
+
 - Anteriormente:
   - Mestre em Ciências - UNIFESP
   - Bacharel em Gestão Ambiental - EACH/USP
@@ -243,6 +245,10 @@ class: middle
 install.packages("usethis")
 library(usethis)
 ```
+
+- Palestra (em inglês) da [Jenny Bryan](https://jennybryan.org/):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZCeBnQBQ1h8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
 .pull-right[
