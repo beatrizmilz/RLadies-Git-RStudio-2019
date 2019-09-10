@@ -48,13 +48,13 @@ div.my-footer span {
 }
 
 .title-slide {
-  width: 60%;
-  text-align: left!important;
+  width: 40%;
+  text-align: left !important;
   height:100%;
   display: table;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 50;
   background-color: var(--color-opacity70);
   color: white;
   padding: 0;
