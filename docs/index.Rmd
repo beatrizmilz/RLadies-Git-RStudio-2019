@@ -408,7 +408,7 @@ knitr::include_graphics("img/prints/proj-version-control-1.PNG")
 
 - Na aba "Create Project from Version Control", selecione a opção **Git**.
 ```{r out.width="100%"}
-knitr::include_graphics("img/prints/proj-version-control-2.PNG")
+knitr::include_graphics("img/prints/proj-version-control-2.png")
 ```
 ]
 
