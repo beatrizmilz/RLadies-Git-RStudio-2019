@@ -839,3 +839,40 @@ class: middle  bg-main4
 Jenny Bryan](https://happygitwithr.com/)
 
 - Documentação do pacote [usethis](https://usethis.r-lib.org/reference/create_package.html)
+
+
+---
+class: middle  
+
+# Agradecimentos
+
+.pull-left[
+
+```{r, out.width="100%"}
+knitr::include_graphics("https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif")
+```
+
+- **Contato**:
+
+  - Email: <a href="mailto:beatriz.milz@usp.br">beatriz.milz@usp.br</a>
+  - Webpage: https://beatrizmilz.com
+  - Github: <a href="http://github.com/beatrizmilz">@beatrizmilz</a>
+  - Twitter: <a href="http://twitter.com/beatrizmilz">@BeaMilz</a> 
+  - Linkedin: <a href="https://www.linkedin.com/in/beatrizmilz">Beatriz Milz</a>
+]
+
+
+.pull-right[
+**Agradecimentos especiais**:
+- **Participantes da R-Ladies São Paulo**
+- [Haydee Svab](https://www.linkedin.com/in/hsvab/) e [Angélica Custódio](https://www.linkedin.com/in/angelicacustodio/)
+- [Caio Lente](https://github.com/clente) e [Curso-R](https://www.curso-r.com/) - Pelo post sobre Git e GitHub, e por responder as dúvidas!
+
+
+
+
+- Apresentação feita com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme).
+]
+
+
+
