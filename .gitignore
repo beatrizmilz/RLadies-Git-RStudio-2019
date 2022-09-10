@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 lista-de-presenca/
+.Rdata
+.httr-oauth
+.DS_Store
