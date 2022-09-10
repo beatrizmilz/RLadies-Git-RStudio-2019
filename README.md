@@ -11,3 +11,10 @@ Esse repositório contém os códigos e apresentação da palestra: Primeiros pa
 Participantes:
 
 - [NOME COMPLETO](https://link-para-alguma-pagina.com)
+
+1) Evaldo Martins da Silva (https://github.com/Evaldo-Martins-STAT)
+2)
+3)
+4) 
+5)
+
